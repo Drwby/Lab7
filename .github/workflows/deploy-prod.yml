@@ -12,7 +12,7 @@ jobs:
       - name: set the ubuntu user as the owner of the /var/www/html directory for unbuntu 24+
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.SSH_USER_NAME }}
           key: ${{ secrets.SSH_KEY2 }}
           script: |
@@ -30,7 +30,7 @@ jobs:
       - name: set the root user as the owner of the /var/www/html directory for unbuntu 24+
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.SSH_USER_NAME }}
           key: ${{ secrets.SSH_KEY2 }}
           script: |
