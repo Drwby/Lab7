@@ -14,7 +14,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER_NAME }}
-          key: $ {{ secrets.SSH_KEY2 }}
+          key: ${{ secrets.SSH_KEY2 }}
           script: |
             sudo chown -R ubuntu /var/www/html
       - name: copy file to server
@@ -32,6 +32,6 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER_NAME }}
-          key: $ {{ secrets.SSH_KEY2 }}
+          key: ${{ secrets.SSH_KEY2 }}
           script: |
             sudo chown -R root /var/www/html
