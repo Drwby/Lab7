@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: check out the code to build server
         uses: actions/checkout@v3
-      - name: set the ubuntu user as the owner of the /var/www/html directory
-      for unbuntu 24+
+      - name: set the ubuntu user as the owner of the /var/www/html directory for unbuntu 24+
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.HOST }}
@@ -28,8 +27,7 @@ jobs:
           source: "./html/*"
           target: "/var/www/html"
           strip_components: 1
-      - name: set the root user as the owner of the /var/www/html directory
-      for unbuntu 24+
+      - name: set the root user as the owner of the /var/www/html directory for unbuntu 24+
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.HOST }}
